@@ -1,38 +1,358 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir Next", "Avenir", "Helvetica Neue", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* GENERAL */
+
+.intro-img {
+  width: 100%;
+  height: 30vh;
+  background-color: #00619b;
+  background-image: url("../public/images/mendenhall-ice-caves.png");
+  background-size: cover;
+  background-position: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+article {
+  background-color: #023047;
+  color: whitesmoke;
+  text-shadow: 0 0.1em black;
+  line-height: 1.4em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+section {
+  width: 90%;
+}
+
+.sections-map {
+  width: 100%;
+}
+
+/* TYPOGRAPHY AND BACKGROUND */
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
   color: white;
+  margin: 0.5em 0;
 }
 
-.App-link {
-  color: #61dafb;
+h3,
+h4 {
+  line-height: 1.5em;
 }
 
-@keyframes App-logo-spin {
+h3 {
+  font-size: 1.8rem;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+span {
+  font-weight: bold;
+}
+
+.separator-diamonds p {
+  font-size: 1.3rem;
+}
+
+/* intro */
+
+.author-date {
+  font-size: 0.85rem;
+  margin-bottom: 3em;
+}
+
+/* MAP */
+
+.sections-map {
+  background-color: rgba(5, 5, 51, 0.533);
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 300px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  margin: 3em 0;
+  text-shadow: none;
+}
+
+.sections-map-places {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.sections-map-places-place:hover {
+  background-color: #1d3557;
+  cursor: pointer;
+}
+
+.sections-map-places-place {
+  width: 45.5%;
+  padding: 1%;
+}
+
+.sections-map-places-place h4 {
+  font-size: 1rem;
+}
+
+.sections-map-places-place-img {
+  height: 20vw;
+}
+
+/* MAP ZOOMED */
+
+.sections-map-places-place-zoomed {
+  margin-bottom: 4em;
+}
+
+@keyframes fadein {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.sections-map-places-place-desc-zoomed {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.sections-map-places-place-img-zoomed {
+  width: 100%;
+  height: 30vh;
+}
+
+.sections-map-places-zoomed-btn {
+  border-radius: 50%;
+  font-size: 1.5rem;
+  border: 1px solid #00619b;
+  position: sticky;
+  bottom: 30px;
+  left: 0;
+  color: rgb(134, 125, 125);
+  background-color: #023047;
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.sections-map-places-zoomed-btn:hover {
+  cursor: pointer;
+}
+
+/* Movie */
+
+.sections-film-movie {
+  height: 50vw;
+  text-align: center;
+  margin-bottom: 4em;
+  margin-top: 2em;
+}
+
+.sections-film-movie-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* links */
+
+a {
+  color: white;
+  display: block;
+  border: none;
+  text-decoration: none;
+}
+
+.sections-links-link {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+
+.sections-links-link * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.sections-links-link h4 {
+  margin-bottom: 0.5em;
+}
+
+.sections-links-link-image {
+  height: 75px;
+  min-width: 125px;
+  border-top: 8px solid black;
+  border-bottom: 8px solid black;
+  display: none;
+}
+
+.sections-links-link p:last-child {
+  margin-top: 2em;
+  font-size: 0.8rem;
+}
+
+.sections-links-link {
+  background: #0d415f;
+  padding: 1.5em 2em;
+  margin: 3em 0;
+}
+
+.sections-links-link:first-child {
+  margin-top: 2em;
+}
+.sections-links-link:last-child {
+  margin-bottom: 0;
+}
+
+.sections-links-link:hover {
+  background-color: #007ac2;
+}
+
+.link-btn {
+  display: block;
+  width: fit-content;
+  background-color: #457778;
+  padding: 1em 2em;
+  margin-bottom: 2em;
+}
+
+/* Section Separators */
+
+.separator-diamonds {
+  text-align: center;
+  margin-top: 2em;
+  color: #1d5b6b;
+  letter-spacing: 2px;
+}
+
+/* MEDIA */
+
+@media (min-width: 590px) {
+  .sections-links-link-image {
+    display: block;
+  }
+
+  .sections-map-places-place {
+    width: 28%;
+  }
+
+  .sections-film-movie {
+    height: 40vw;
+  }
+
+  .sections-map-places-place-img {
+    height: 15vw;
+  }
+}
+
+@media (min-width: 750px) {
+  .sections-map-places-place {
+    width: 19.25%;
+  }
+
+  .sections-map-places-place-img {
+    height: 12vw;
+  }
+
+  .sections-map-places-place-desc-zoomed {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .sections-film-movie-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .sections-map {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .sections-map-places-zoomed,
+  .sections-map-places {
+    width: 45%;
+    padding: 2em 0;
+    font-size: 1.2rem;
+  }
+
+  .sections-map-places-place-desc-zoomed {
+    width: 70%;
+  }
+
+  .leaflet-container {
+    width: 55%;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .sections-map-places {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .sections-map-places-place {
+    width: 28%;
+  }
+
+  .sections-map-places-place-img {
+    height: 8vw;
+  }
+
+  .sections-map-places-place h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1150px) {
+  p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+  section {
+    width: 50%;
+  }
+
+  .intro-img {
+    height: 65vh;
+  }
+
+  .sections-links-link-image {
+    height: inherit;
+    min-width: 200px;
+    width: 20%;
+  }
+
+  .sections-film-movie {
+    height: 400px;
+  }
+
+  .sections-map-places-place-img {
+    height: 7vw;
   }
 }

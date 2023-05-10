@@ -1,4 +1,4 @@
-import dataPlaces from "../data-places";
+import dataPlaces from "../Data/data-places";
 import React from "react";
 
 export default function GetPlaces({

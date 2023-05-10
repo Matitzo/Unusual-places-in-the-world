@@ -1,5 +1,5 @@
 import React from "react";
-import dataLinks from "../data-links";
+import dataLinks from "../Data/data-links";
 
 export default function GetLinks() {
   return (

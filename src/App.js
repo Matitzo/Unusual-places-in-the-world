@@ -95,7 +95,13 @@ function App() {
           </p>
         </section>
         <section className="sections-map">
-          <GetMap center={center} />
+          <GetMap
+            center={center}
+            isZooming={isZooming}
+            setCenter={setCenter}
+            setZooming={setZooming}
+            setCurrentZoom={setCurrentZoom}
+          />
           <GetPlaces
             isZooming={isZooming}
             setCenter={setCenter}

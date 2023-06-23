@@ -1,16 +1,34 @@
 {
   "files": {
-    "main.css": "/Unusual-places-in-the-world/static/css/main.b1525358.css",
-    "main.js": "/Unusual-places-in-the-world/static/js/main.a15cc0dc.js",
+    "main.css": "/Unusual-places-in-the-world/static/css/main.d897e017.css",
+    "main.js": "/Unusual-places-in-the-world/static/js/main.8ec8d865.js",
     "static/js/787.28cb0dcd.chunk.js": "/Unusual-places-in-the-world/static/js/787.28cb0dcd.chunk.js",
-    "static/media/mendenhall-ice-caves-min.png": "/Unusual-places-in-the-world/static/media/mendenhall-ice-caves-min.af14768230945769ec28.png",
+    "static/media/mendenhall-ice-caves-min.png": "/Unusual-places-in-the-world/static/media/mendenhall-ice-caves-min.0c3b9f77cfd37bc68c71.png",
+    "static/media/danakil-depression-min.png": "/Unusual-places-in-the-world/static/media/danakil-depression-min.c9d902cf7bbb8ca12bbf.png",
+    "static/media/pamukkale-min.png": "/Unusual-places-in-the-world/static/media/pamukkale-min.9f919e6e806a2ac5cffb.png",
+    "static/media/bajkal-lake-min.png": "/Unusual-places-in-the-world/static/media/bajkal-lake-min.abb80d7762ff9e5f72aa.png",
+    "static/media/letba-lake-min.png": "/Unusual-places-in-the-world/static/media/letba-lake-min.364622aa08be1632720e.png",
+    "static/media/vaadhoo-islands-min.png": "/Unusual-places-in-the-world/static/media/vaadhoo-islands-min.718246ed33fcda856e9b.png",
+    "static/media/mendenhall-ice-caves-2-min.png": "/Unusual-places-in-the-world/static/media/mendenhall-ice-caves-2-min.42aeb4e34e422f9fc0f4.png",
+    "static/media/fly-gejzers-2-min.png": "/Unusual-places-in-the-world/static/media/fly-gejzers-2-min.bc0c2cf06849f4f85206.png",
+    "static/media/fly-gejzers-min.png": "/Unusual-places-in-the-world/static/media/fly-gejzers-min.9fea2897834264350ecd.png",
+    "static/media/salar-de-uyuni-min.png": "/Unusual-places-in-the-world/static/media/salar-de-uyuni-min.a69f9bed5e61602f0ca7.png",
+    "static/media/caño-cristales-river-2-min.png": "/Unusual-places-in-the-world/static/media/caño-cristales-river-2-min.ac4c230291ae0225fcdb.png",
+    "static/media/zhangye-danxia-min.png": "/Unusual-places-in-the-world/static/media/zhangye-danxia-min.482dc6a8305e3ac18fe7.png",
+    "static/media/devils-pit-2-min.png": "/Unusual-places-in-the-world/static/media/devils-pit-2-min.38ebfdb8c3c72f2f5e85.png",
+    "static/media/caño-cristales-river-min.png": "/Unusual-places-in-the-world/static/media/caño-cristales-river-min.c9759fb5607dcf40c4b8.png",
+    "static/media/painted-dunes-park-min.png": "/Unusual-places-in-the-world/static/media/painted-dunes-park-min.f562d68bc93f79dd0f9b.png",
+    "static/media/lapland-min.png": "/Unusual-places-in-the-world/static/media/lapland-min.97b87641c36902973156.png",
+    "static/media/reynisfjara-min.png": "/Unusual-places-in-the-world/static/media/reynisfjara-min.3b56511ca88711df5617.png",
+    "static/media/grand-prismatic-spring-min.png": "/Unusual-places-in-the-world/static/media/grand-prismatic-spring-min.c34b77de2a7d861dbf6d.png",
+    "static/media/devils-pit-min.png": "/Unusual-places-in-the-world/static/media/devils-pit-min.98341f328039cb6b4344.png",
     "index.html": "/Unusual-places-in-the-world/index.html",
-    "main.b1525358.css.map": "/Unusual-places-in-the-world/static/css/main.b1525358.css.map",
-    "main.a15cc0dc.js.map": "/Unusual-places-in-the-world/static/js/main.a15cc0dc.js.map",
+    "main.d897e017.css.map": "/Unusual-places-in-the-world/static/css/main.d897e017.css.map",
+    "main.8ec8d865.js.map": "/Unusual-places-in-the-world/static/js/main.8ec8d865.js.map",
     "787.28cb0dcd.chunk.js.map": "/Unusual-places-in-the-world/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1525358.css",
-    "static/js/main.a15cc0dc.js"
+    "static/css/main.d897e017.css",
+    "static/js/main.8ec8d865.js"
   ]
 }

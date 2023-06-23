@@ -31,7 +31,6 @@ export default function GetPlaces({
     setZooming(true);
   }
 
-  console.log(isZooming ? "sections-map-places-zoomed" : "sections-map-places");
   return (
     <div
       className={

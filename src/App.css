@@ -10,9 +10,11 @@ body {
   width: 100%;
   height: 30vh;
   background-color: #00619b;
-  background-image: url("../public/images/mendenhall-ice-caves-min.png");
+  background-image: url("./images/mendenhall-ice-caves-min.png");
   background-size: cover;
   background-position: center;
+  margin: 0;
+  padding: 0;
 }
 
 article {
@@ -116,6 +118,7 @@ span {
 }
 
 .sections-map-places-place-img {
+  width: 100%;
   height: 20vw;
 }
 
@@ -372,7 +375,7 @@ a {
   }
 
   .sections-links-link-image {
-    height: inherit;
+    height: 125px;
     min-width: 200px;
     width: 20%;
   }

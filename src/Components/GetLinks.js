@@ -12,14 +12,15 @@ export default function GetLinks() {
               <p>{link.place}</p>
               <p className="sections-links-link-url">{link.url}</p>
             </div>
-            <div
+            <img
               className="sections-links-link-image"
+              src={link.img}
+              loading="lazy"
               style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL + link.img})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
+                maxWidth: "100px",
+                maxHaight: "75px",
               }}
-            ></div>
+            ></img>
           </a>
         );
       })}

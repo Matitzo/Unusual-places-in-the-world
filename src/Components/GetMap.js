@@ -5,10 +5,10 @@ import { useRef } from "react";
 
 export default function GetMap({
   center,
-  isZooming,
   setCenter,
   setZooming,
   setCurrentZoom,
+  setChangeZoomOnMap,
 }) {
   const popupElRef = useRef(null);
 
@@ -25,6 +25,7 @@ export default function GetMap({
       6,
     ]);
     setZooming(true);
+    setChangeZoomOnMap((prevData) => !prevData);
     setCurrentZoom(`${e.currentTarget.id.split(" ")[0]}`);
   }
 

@@ -27,9 +27,11 @@ export default function GetPlaces({
       ],
       6,
     ]);
-    setZooming(true);
     setCurrentZoom(`${e.currentTarget.id}`);
+    setZooming(true);
   }
+
+  console.log(isZooming ? "sections-map-places-zoomed" : "sections-map-places");
   return (
     <div
       className={
@@ -51,18 +53,16 @@ export default function GetPlaces({
               !isZooming && handleClick(e);
             }}
           >
-            <div
+            <img
+              loading="lazy"
               className={
                 isZooming
                   ? "sections-map-places-place-img-zoomed"
                   : "sections-map-places-place-img"
               }
-              style={{
-                backgroundImage: `url(${process.env.PUBLIC_URL + place.img})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            ></div>
+              src={place.img}
+              style={{}}
+            ></img>
             <div
               className={
                 isZooming ? "sections-map-places-place-desc-zoomed" : ""

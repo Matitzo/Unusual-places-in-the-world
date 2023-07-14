@@ -1,11 +1,14 @@
 import dataPlaces from "../Data/data-places";
 import React from "react";
+import PlaceHtml from "./PlaceHtml";
 
 export default function GetPlaces({
   isZooming,
   setCenter,
   setZooming,
   setCurrentZoom,
+  setIsModal,
+  localStoragePlaces,
 }) {
   function handleCloseZoom() {
     window.scrollTo(0, 650);
@@ -31,6 +34,10 @@ export default function GetPlaces({
     setZooming(true);
   }
 
+  function handleButtonClick() {
+    setIsModal(true);
+  }
+
   return (
     <div
       className={
@@ -40,44 +47,32 @@ export default function GetPlaces({
     >
       {dataPlaces.map((place) => {
         return (
-          <div
-            className={
-              isZooming
-                ? "sections-map-places-place-zoomed"
-                : "sections-map-places-place"
-            }
-            id={place.id}
-            data-coord={place.coordinates}
-            onClick={(e) => {
-              !isZooming && handleClick(e);
-            }}
-          >
-            <img
-              loading="lazy"
-              className={
-                isZooming
-                  ? "sections-map-places-place-img-zoomed"
-                  : "sections-map-places-place-img"
-              }
-              src={place.img}
-              style={{}}
-            ></img>
-            <div
-              className={
-                isZooming ? "sections-map-places-place-desc-zoomed" : ""
-              }
-            >
-              <h4
-                className="sections-map-places-place-title"
-                data-title={place.title}
-              >
-                {place.title}
-              </h4>
-              {isZooming && <p>{place.desc}</p>}
-            </div>
-          </div>
+          <PlaceHtml
+            place={place}
+            isZooming={isZooming}
+            handleClick={handleClick}
+          />
         );
       })}
+      {localStoragePlaces.map((place) => {
+        return (
+          <PlaceHtml
+            place={place}
+            isZooming={isZooming}
+            handleClick={handleClick}
+          />
+        );
+      })}
+      <div
+        className={
+          isZooming ? "plus-button-container-zoomed" : "plus-button-container"
+        }
+      >
+        <button
+          className="plus-button plus-button--large"
+          onClick={() => handleButtonClick()}
+        ></button>
+      </div>
       {isZooming && (
         <button
           className="sections-map-places-zoomed-btn"

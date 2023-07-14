@@ -7,6 +7,7 @@ import MoreBeautifullPlacesSection from "./Components/MoreBeautifullPlacesSectio
 import IntroImg from "./Components/IntroImg";
 import GetPlaces from "./Components/GetPlaces";
 import GetMap from "./Components/GetMap";
+import AddPlaceForm from "./Components/AddPlaceForm";
 import "./App.css";
 
 function App() {
@@ -14,6 +15,13 @@ function App() {
   const [changeZoomOnMap, setChangeZoomOnMap] = React.useState(false);
   const [center, setCenter] = React.useState([[0, 0], 1]);
   const [currentZoom, setCurrentZoom] = React.useState("");
+  const [isModal, setIsModal] = React.useState(false);
+  const [isErrorMsg, setIsErrorMsg] = React.useState(false);
+  const [localStoragePlaces, setLocalStoragePlaces] = React.useState(
+    localStorage.getItem("places")
+      ? JSON.parse(localStorage.getItem("places"))
+      : []
+  );
 
   React.useEffect(() => {
     isZooming && scrollTo();
@@ -28,6 +36,16 @@ function App() {
       window.removeEventListener("scroll", isInView);
     };
   }, [isZooming, currentZoom]);
+
+  React.useEffect(() => {
+    try {
+      localStorage.setItem("places", JSON.stringify(localStoragePlaces));
+      setIsErrorMsg(false);
+      setIsModal(false);
+    } catch (e) {
+      setIsErrorMsg(true);
+    }
+  }, [localStoragePlaces]);
 
   function scrollTo() {
     if (isZooming && currentZoom !== "") {
@@ -81,6 +99,13 @@ function App() {
 
   return (
     <main>
+      <AddPlaceForm
+        isModal={isModal}
+        setIsModal={setIsModal}
+        id={localStoragePlaces.length}
+        setLocalStoragePlaces={setLocalStoragePlaces}
+        isErrorMsg={isErrorMsg}
+      />
       <IntroImg />
       <article>
         <Header />
@@ -92,12 +117,15 @@ function App() {
             setZooming={setZooming}
             setCurrentZoom={setCurrentZoom}
             setChangeZoomOnMap={setChangeZoomOnMap}
+            localStoragePlaces={localStoragePlaces}
           />
           <GetPlaces
             isZooming={isZooming}
             setCenter={setCenter}
             setZooming={setZooming}
             setCurrentZoom={setCurrentZoom}
+            setIsModal={setIsModal}
+            localStoragePlaces={localStoragePlaces}
           />
         </section>
         <SectionSeparator />

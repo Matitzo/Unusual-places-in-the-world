@@ -2,6 +2,7 @@ import { useMap, MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import dataPlaces from "../Data/data-places";
 import React from "react";
 import { useRef } from "react";
+import GetMarker from "./GetMarker";
 
 export default function GetMap({
   center,
@@ -9,6 +10,7 @@ export default function GetMap({
   setZooming,
   setCurrentZoom,
   setChangeZoomOnMap,
+  localStoragePlaces,
 }) {
   const popupElRef = useRef(null);
 
@@ -49,20 +51,20 @@ export default function GetMap({
       />
       {dataPlaces.map((place) => {
         return (
-          <Marker position={place.coordinates}>
-            <Popup ref={popupElRef}>
-              <div
-                className="sections-map-popup-div"
-                id={place.id + " map"}
-                data-coord={place.coordinates}
-                onClick={(e) => {
-                  handleClick(e);
-                }}
-              >
-                {place.title}
-              </div>
-            </Popup>
-          </Marker>
+          <GetMarker
+            place={place}
+            handleClick={handleClick}
+            popupElRef={popupElRef}
+          />
+        );
+      })}
+      {localStoragePlaces.map((place) => {
+        return (
+          <GetMarker
+            place={place}
+            handleClick={handleClick}
+            popupElRef={popupElRef}
+          />
         );
       })}
     </MapContainer>

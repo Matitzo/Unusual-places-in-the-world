@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Unusual-places-in-the-world/static/css/main.d897e017.css",
-    "main.js": "/Unusual-places-in-the-world/static/js/main.943e61fc.js",
+    "main.css": "/Unusual-places-in-the-world/static/css/main.058bd05f.css",
+    "main.js": "/Unusual-places-in-the-world/static/js/main.dd276dbb.js",
     "static/media/mendenhall-ice-caves-min.png": "/Unusual-places-in-the-world/static/media/mendenhall-ice-caves-min.0c3b9f77cfd37bc68c71.png",
     "static/media/danakil-depression-min.png": "/Unusual-places-in-the-world/static/media/danakil-depression-min.c9d902cf7bbb8ca12bbf.png",
     "static/media/pamukkale-min.png": "/Unusual-places-in-the-world/static/media/pamukkale-min.9f919e6e806a2ac5cffb.png",
@@ -22,11 +22,11 @@
     "static/media/grand-prismatic-spring-min.png": "/Unusual-places-in-the-world/static/media/grand-prismatic-spring-min.c34b77de2a7d861dbf6d.png",
     "static/media/devils-pit-min.png": "/Unusual-places-in-the-world/static/media/devils-pit-min.98341f328039cb6b4344.png",
     "index.html": "/Unusual-places-in-the-world/index.html",
-    "main.d897e017.css.map": "/Unusual-places-in-the-world/static/css/main.d897e017.css.map",
-    "main.943e61fc.js.map": "/Unusual-places-in-the-world/static/js/main.943e61fc.js.map"
+    "main.058bd05f.css.map": "/Unusual-places-in-the-world/static/css/main.058bd05f.css.map",
+    "main.dd276dbb.js.map": "/Unusual-places-in-the-world/static/js/main.dd276dbb.js.map"
   },
   "entrypoints": [
-    "static/css/main.d897e017.css",
-    "static/js/main.943e61fc.js"
+    "static/css/main.058bd05f.css",
+    "static/js/main.dd276dbb.js"
   ]
 }
